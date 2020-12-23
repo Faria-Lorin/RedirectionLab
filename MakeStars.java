@@ -3,9 +3,10 @@ public class MakeStars{
   public static void main( String[]args ){
       //use the standard input (terminal input)
       //as the string that you read from]
-      String out = "";
+
       Scanner n = new Scanner(System.in);
       while(n.hasNext()){
+      String out = "";
       String line = n.nextLine();
 
       for (int i = 0; i < line.length(); i++){
@@ -14,8 +15,9 @@ public class MakeStars{
         }
         out += "*";
       }
+      System.out.println(out);
     }
-    System.out.println(out);
+
       //use hasNextLine()/nextLine() to loop over
       //all of the data
 
