@@ -23,11 +23,17 @@ public class PigLatin {
         out = s;
         out += "hay";
       }
-    else if ((startVowel(s,0) == false && startVowel(s,1) == false) || s.substring(0, 2).equals("qu")){
+    if ((startVowel(s,0) == false && startVowel(s,1) == false) || s.substring(0, 2).equals("qu")){
       for (int i = 2; i < s.length(); i++){
         out += s.charAt(i);
       }
       out += s.substring(0, 2) + "ay";
+    }
+    else {
+      for (int i = 1; i < s.length(); i++){
+        out += s.charAt(i);
+      }
+      out += s.charAt(0) + "ay";
     }
     return out;
   }
