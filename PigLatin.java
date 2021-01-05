@@ -3,7 +3,16 @@ public class PigLatin {
   public static boolean startVowel(String v, int i){
     return v.charAt(i) == 'a' || v.charAt(i) == 'e' || v.charAt(i) == 'i' || v.charAt(i) == 'o' || v.charAt(i) == 'u';
   }
-
+  public static boolean digraph (String s){
+    boolean x = false;
+    String [] dList = new String[] {"bl", "br", "ch", "ck", "cl", "cr", "dr", "fl", "fr", "gh", "gl", "gr", "ng", "ph", "pl", "pr", "qu", "sc", "sh", "sk", "sl", "sm", "sn", "sp", "st", "sw", "th", "tr", "tw", "wh", "wr"};
+    for (int i=0; i < dList.length; i++){
+      if (s.substring(0,2).equals(dList[i])){
+        x = true;
+      }
+    }
+    return x;
+  }
 
   public static String pigLatinSimple(String s){
     s = s.toLowerCase();
@@ -28,7 +37,8 @@ public class PigLatin {
         out = s;
         out += "hay";
     }
-    else if (startVowel(s,1) == false || s.substring(0, 2).equals("qu")){
+    //else if (startVowel(s,1) == false || s.substring(0, 2).equals("qu")){
+    else if (digraph(s)){
       for (int i = 2; i < s.length(); i++){
         out += s.charAt(i);
       }
