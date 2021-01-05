@@ -5,7 +5,7 @@ public class MakeStars{
       //as the string that you read from]
 
       Scanner n = new Scanner(System.in);
-      while(n.hasNext()){
+      while(n.hasNextLine()){
       String out = "";
       String line = n.nextLine();
 
