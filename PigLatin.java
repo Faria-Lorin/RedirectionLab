@@ -6,6 +6,7 @@ public class PigLatin {
 
 
   public static String pigLatinSimple(String s){
+    s = s.toLowerCase();
     String out = "";
     if (startVowel(s,0)) {
         out = s;
@@ -21,6 +22,7 @@ public class PigLatin {
   }
 
   public static String pigLatin(String s){
+    s = s.toLowerCase();
     String out = "";
     if (startVowel(s,0)) {
         out = s;
@@ -42,6 +44,7 @@ public class PigLatin {
   }
 
   public static String pigLatinBest(String s){
+    s = s.toLowerCase();
     String out = "";
     String punctuation = "";
     if (Character.isLetter(s.charAt(s.length()-1)) == false && Character.isDigit(s.charAt(s.length()-1)) == false){
@@ -65,7 +68,7 @@ public class PigLatin {
       Scanner line = new Scanner (n.nextLine());
         while (line.hasNext()){
           String word = line.next();
-          out += pigLatinBest(word.toLowerCase());
+          out += pigLatinBest(word);
           out += " ";
         }
         out = out.substring(0, out.length() - 1);
