@@ -56,8 +56,15 @@ public class PigLatin {
   }
 
   public static void main(String[] args) {
-    System.out.println(pigLatinSimple(args[0]));
-    System.out.println(pigLatin(args[0]));
-    System.out.println(pigLatinBest(args[0]));
+    Scanner n = new Scanner(System.in);
+    while(n.hasNextLine()){
+    String out = "";
+    Scanner line = new Scanner (n.nextLine());
+      while (line.hasNext()){
+        String word = line.next();
+        out += pigLatinBest(word);
+      }
+      System.out.println(out);
+    }
   }
 }
