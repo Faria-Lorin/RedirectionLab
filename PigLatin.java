@@ -48,7 +48,9 @@ public class PigLatin {
     if (Character.isLetter(s.charAt(0)) == false){
       out = s;
     }
-
+    else {
+      out = pigLatin(s);
+    }
     out += punctuation;
     return out;
   }
