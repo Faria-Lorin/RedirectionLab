@@ -11,9 +11,16 @@ public class MakeStars{
 
       for (int i = 0; i < line.length(); i++){
         if (line.charAt(i) == ' '){
-          out += " ";
+          if (i == 0){
+            out += "";
+          }
+          else {
+            out += " ";
+          }
         }
-        out += "*";
+        else {
+          out += "*";
+        }
       }
       System.out.println(out);
     }
