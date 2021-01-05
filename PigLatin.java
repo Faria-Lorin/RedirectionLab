@@ -6,6 +6,12 @@ public class PigLatin {
         out = s;
         out += "hay";
       }
+    else {
+      for (int i = 1; i < s.length(); i++){
+        out += s.charAt(i);
+      }
+      out += s.charAt(0) + "ay";
+    }
       return out;
     }
   public static void main(String[] args) {
