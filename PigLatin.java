@@ -1,8 +1,11 @@
 import java.util.*;
 public class PigLatin {
+  public static boolean startVowel(String v){
+    return v.charAt(0) == 'a' || v.charAt(0) == 'e' || v.charAt(0) == 'i' || v.charAt(0) == 'o' || v.charAt(0) == 'u';
+  }
   public static String pigLatinSimple(String s){
     String out = "";
-    if (s.charAt(0) == 'a' || s.charAt(0) == 'e' || s.charAt(0) == 'i' || s.charAt(0) == 'o' || s.charAt(0) == 'u'){
+    if (startVowel(s)) {
         out = s;
         out += "hay";
       }
@@ -16,14 +19,15 @@ public class PigLatin {
   }
   public static String pigLatin(String s){
     String out = "";
-    if (s.charAt(0) == 'a' || s.charAt(0) == 'e' || s.charAt(0) == 'i' || s.charAt(0) == 'o' || s.charAt(0) == 'u'){
+    if (startVowel(s)) {
         out = s;
         out += "hay";
       }
     return out;
   }
-  
+
   public static void main(String[] args) {
     System.out.println(pigLatinSimple(args[0]));
+    System.out.println(pigLatin(args[0]));
   }
 }
